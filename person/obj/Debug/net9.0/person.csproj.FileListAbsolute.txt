@@ -1,0 +1,14 @@
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\obj\Debug\net9.0\person.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\obj\Debug\net9.0\person.AssemblyInfoInputs.cache
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\obj\Debug\net9.0\person.AssemblyInfo.cs
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\obj\Debug\net9.0\person.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\bin\Debug\net9.0\person.exe
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\bin\Debug\net9.0\person.deps.json
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\bin\Debug\net9.0\person.runtimeconfig.json
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\bin\Debug\net9.0\person.dll
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\bin\Debug\net9.0\person.pdb
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\obj\Debug\net9.0\person.dll
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\obj\Debug\net9.0\refint\person.dll
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\obj\Debug\net9.0\person.pdb
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\obj\Debug\net9.0\person.genruntimeconfig.cache
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\person\obj\Debug\net9.0\ref\person.dll

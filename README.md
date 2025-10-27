@@ -1,2 +1,2 @@
-# Cours-C-Sharp
-Cour de C# en B2 a SDV nantes
+# Cours-C-sharp
+cours de C# de b2 a SDV Nantes
