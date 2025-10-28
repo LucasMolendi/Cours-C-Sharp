@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas\\OneDrive - SUP DE VINCI\\Documents\\B2\\C#\\cours C-sharp\\Cours-C-sharp\\TP\\TP.csproj": {}
+    "C:\\Users\\Lucas\\OneDrive - SUP DE VINCI\\Documents\\B2\\C#\\Cours-C-Sharp\\TP\\TP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas\\OneDrive - SUP DE VINCI\\Documents\\B2\\C#\\cours C-sharp\\Cours-C-sharp\\TP\\TP.csproj": {
+    "C:\\Users\\Lucas\\OneDrive - SUP DE VINCI\\Documents\\B2\\C#\\Cours-C-Sharp\\TP\\TP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\OneDrive - SUP DE VINCI\\Documents\\B2\\C#\\cours C-sharp\\Cours-C-sharp\\TP\\TP.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\OneDrive - SUP DE VINCI\\Documents\\B2\\C#\\Cours-C-Sharp\\TP\\TP.csproj",
         "projectName": "TP",
-        "projectPath": "C:\\Users\\Lucas\\OneDrive - SUP DE VINCI\\Documents\\B2\\C#\\cours C-sharp\\Cours-C-sharp\\TP\\TP.csproj",
+        "projectPath": "C:\\Users\\Lucas\\OneDrive - SUP DE VINCI\\Documents\\B2\\C#\\Cours-C-Sharp\\TP\\TP.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\OneDrive - SUP DE VINCI\\Documents\\B2\\C#\\cours C-sharp\\Cours-C-sharp\\TP\\obj\\",
+        "outputPath": "C:\\Users\\Lucas\\OneDrive - SUP DE VINCI\\Documents\\B2\\C#\\Cours-C-Sharp\\TP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
