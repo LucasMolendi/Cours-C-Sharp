@@ -33,10 +33,10 @@ public class Classe
        set => eleves = value ?? throw new ArgumentNullException(nameof(value));
    }
 
-   public Classe(string name, string ecole, string niveau)
-   {
-       this.name = name;
-       this.ecole = ecole;
-       this.niveau = niveau;
-   }
+   // public Classe(string name, string ecole, string niveau)
+   // {
+   //     this.name = name;
+   //     this.ecole = ecole;
+   //     this.niveau = niveau;
+   // }
 }

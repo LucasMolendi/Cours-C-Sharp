@@ -12,3 +12,18 @@ C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\TP\obj\Debu
 C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\TP\obj\Debug\net9.0\TP.pdb
 C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\TP\obj\Debug\net9.0\TP.genruntimeconfig.cache
 C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\cours C-sharp\TP\obj\Debug\net9.0\ref\TP.dll
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\bin\Debug\net9.0\TP.exe
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\bin\Debug\net9.0\TP.deps.json
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\bin\Debug\net9.0\TP.runtimeconfig.json
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\bin\Debug\net9.0\TP.dll
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\bin\Debug\net9.0\TP.pdb
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\obj\Debug\net9.0\TP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\obj\Debug\net9.0\TP.AssemblyInfoInputs.cache
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\obj\Debug\net9.0\TP.AssemblyInfo.cs
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\obj\Debug\net9.0\TP.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\obj\Debug\net9.0\TP.sourcelink.json
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\obj\Debug\net9.0\TP.dll
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\obj\Debug\net9.0\refint\TP.dll
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\obj\Debug\net9.0\TP.pdb
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\obj\Debug\net9.0\TP.genruntimeconfig.cache
+C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\TP\obj\Debug\net9.0\ref\TP.dll
