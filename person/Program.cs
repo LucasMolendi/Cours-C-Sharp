@@ -1,12 +1,9 @@
 ﻿using CoursSupDeVinci;
-using CoursSupDeVinci;
 using CoursSupDeVinci.Utils;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
-
-#region lancement services
 
 // Charger la configuration manuellement
 var configuration = new ConfigurationBuilder()
@@ -28,44 +25,28 @@ var host = Host.CreateDefaultBuilder(args)
 
         // On enregistre notre service applicatif
         services.AddTransient<DbConnection>();
+        
+        // on enregistre le service ServiceCSV
+        services.AddTransient<IServiceCSV, ServiceCSV>();
     })
     .Build();
 
 using var scope = host.Services.CreateScope();
-DbConnection dbConnectionService = scope.ServiceProvider.GetRequiredService<DbConnection>();
+DbConnection DbConnection = scope.ServiceProvider.GetRequiredService<DbConnection>();
 
-#endregion
+// Récupération du service CSV
+IServiceCSV ServiceCSV = scope.ServiceProvider.GetRequiredService<IServiceCSV>();
+
+
 
 String path = configuration.GetRequiredSection("CSVFiles")["CoursSupDeVinci"];
 
-List<Person> persons = new List<Person>(); 
 
-var lignes = File.ReadAllLines(path);
+Classe maClasse = ServiceCSV.ReadCSV(path);
 
-for (int i = 1; i < lignes.Length; i++)
-{
-    String line = lignes[i];
-    Person person = new Person();
-    
-    person.Lastname = line.Split(',')[1];
-    person.Firstname = line.Split(',')[2];
-    person.Birthdate = DateTimeUtils.ConvertToDateTime(line.Split(',')[3]);
-    person.Taille = Int32.Parse(line.Split(',')[5]);
-    
-    List<String> details = line.Split(',')[4].Split(';').ToList();
-    
-    person.AdressDetails = new Detail(details[0], int.Parse(details[1]), details[2]);
-    
-    persons.Add(person);
-}
 
-Classe maClasse = new Classe();
-maClasse.Niveau = "B2";
-maClasse.Name = "B2 C#";
-maClasse.Ecole = "SupDeVinci";
-maClasse.Eleves = persons.ToList();
-
-await dbConnectionService.init(maClasse);
+var db = new DbConnection(new NpgsqlConnection("Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=root"));
+await db.init(maClasse);
 
 #region version avant db
 /*
