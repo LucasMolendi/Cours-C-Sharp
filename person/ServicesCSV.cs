@@ -26,23 +26,23 @@ public class ServiceCSV :  IServiceCSV
             String line = lignes[i];
             Person person = new Person();
 
-            person.Lastname = line.Split(',')[1];
-            person.Firstname = line.Split(',')[2];
-            person.Birthdate = DateTimeUtils.ConvertToDateTime(line.Split(',')[3]);
-            person.Taille = Int32.Parse(line.Split(',')[5]);
+            person.LastName = line.Split(',')[1];
+            person.FirstName = line.Split(',')[2];
+            person.birthdate = DateTimeUtils.ConvertToDateTime(line.Split(',')[3]);
+            person.size = Int32.Parse(line.Split(',')[5]);
 
             List<String> details = line.Split(',')[4].Split(';').ToList();
 
-            person.AdressDetails = new Detail(details[0], int.Parse(details[1]), details[2]);
+            //person.AdressDetails = new Details(details[0], int.Parse(details[1]), details[2]);
 
             persons.Add(person);
         }
 
         Classe maClasse = new Classe();
-        maClasse.Niveau = "B2";
-        maClasse.Name = "B2 C#";
-        maClasse.Ecole = "SupDeVinci";
-        maClasse.Eleves = persons.ToList();
+        maClasse.level = "B2";
+        maClasse.name = "B2 C#";
+        maClasse.school = "SupDeVinci";
+        // maClasse.Eleves = persons.ToList();
             
         return maClasse;
     }

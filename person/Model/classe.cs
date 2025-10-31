@@ -1,5 +1,30 @@
 namespace CoursSupDeVinci;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
+#region ORM
+
+public class Classe
+{
+    [Key]
+    public Guid id_classe { get; set; } = Guid.NewGuid();
+    
+    [Required]
+    public string name { get; set; }
+    
+    [Required]
+    public string level { get; set; }
+    
+    [Required]
+    public string school { get; set; }
+    
+}
+
+#endregion
+
+#region version avant ORM
+/*
 public class Classe
 {
     
@@ -32,11 +57,11 @@ public class Classe
        get => eleves;
        set => eleves = value ?? throw new ArgumentNullException(nameof(value));
    }
-
+   */
+#endregion
    // public Classe(string name, string ecole, string niveau)
    // {
    //     this.name = name;
    //     this.ecole = ecole;
    //     this.niveau = niveau;
    // }
-}

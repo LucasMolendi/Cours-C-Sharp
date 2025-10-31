@@ -1,6 +1,31 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace CoursSupDeVinci;
 
-public class Detail
+#region ORM
+
+public class Details
+{
+    [Key] 
+    public Guid id_details { get; set; } = Guid.NewGuid();
+    
+    [Required]
+    public string street { get; set; }
+    
+    [Required]
+    public int zipCode { get; set; }
+    
+    [Required]
+    public string city { get; set; }
+
+}
+
+#endregion
+
+#region avant ORM
+/*public class Detail
 {
     private String street;
 
@@ -32,4 +57,5 @@ public class Detail
         get => city;
         set => city = value ?? throw new ArgumentNullException(nameof(value));
     }
-}
+}*/
+#endregion

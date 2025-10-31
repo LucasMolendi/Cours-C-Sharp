@@ -1,5 +1,38 @@
 using CoursSupDeVinci;
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
+#region Avec ORM
+public class Person
+{
+    [Key]
+    public Guid id_person { get; set; } =  Guid.NewGuid();
+    
+    [Required]
+    public string FirstName { get; set; }
+    
+    [Required]
+    public string LastName { get; set; }
+    
+    [Required]
+    public DateTime birthdate { get; set; }
+    
+    [Required]
+    //relation n..n vers Detail
+    public ICollection<Details> Details { get; set; } = new List<Details>();
+    
+    [Required]
+    public double size {get; set;}
+    
+    [ForeignKey("Classe")]
+    public Guid id_classe { get; set; }
+    public Classe Classe { get; set; }
+
+}
+#endregion
+#region Avant ORM
+/*
 public class Person
 {
     private String firstname;
@@ -55,3 +88,5 @@ public class Person
         return years;
     }
 }
+*/
+#endregion

@@ -1,3 +1,6 @@
+
+#region Avant OMR
+
 using Npgsql;
 using System.Data;
 
@@ -25,41 +28,46 @@ public class DbConnection
         var insertClasseCmd = new NpgsqlCommand(
             "INSERT INTO classe(name, level, school) VALUES (@name, @level, @school) RETURNING id",
             _connection, transaction);
-        insertClasseCmd.Parameters.AddWithValue("name", maClasse.Name);
-        insertClasseCmd.Parameters.AddWithValue("level", maClasse.Niveau);
-        insertClasseCmd.Parameters.AddWithValue("school", maClasse.Ecole);
 
-        Guid classeId = (Guid)await insertClasseCmd.ExecuteScalarAsync();
+        insertClasseCmd.Parameters.AddWithValue("name", maClasse.name);
+        insertClasseCmd.Parameters.AddWithValue("level", maClasse.level);
+        insertClasseCmd.Parameters.AddWithValue("school", maClasse.school);
+
+// ✅ On récupère l'id généré par la base
+        Guid idclasse = (Guid)await insertClasseCmd.ExecuteScalarAsync();
 
         // --- Insert Persons ---
         foreach (var person in maClasse.Eleves)
         {
+            // Insert Person (sans fournir l'ID)
             var insertPersonCmd = new NpgsqlCommand(
-                "INSERT INTO person(firstname, lastname, birthdate, size, id_classe) VALUES (@firstname, @lastname, @birthdate, @size, @idClasse) RETURNING id",
+                @"INSERT INTO person(firstname, lastname, birthdate, size, idclasse) 
+                  VALUES (@firstname, @lastname, @birthdate, @size, @idclasse)
+                  RETURNING id",
                 _connection, transaction);
             insertPersonCmd.Parameters.AddWithValue("firstname", person.Firstname);
             insertPersonCmd.Parameters.AddWithValue("lastname", person.Lastname);
             insertPersonCmd.Parameters.AddWithValue("birthdate", person.Birthdate);
             insertPersonCmd.Parameters.AddWithValue("size", person.Taille);
-            insertPersonCmd.Parameters.AddWithValue("idClasse", classeId);
+            insertPersonCmd.Parameters.AddWithValue("idclasse", idclasse);
 
-            Guid personId = (Guid)await insertPersonCmd.ExecuteScalarAsync();
-
+            // Récupère l'ID généré pour la personne
+            Guid idperson = (Guid)await insertPersonCmd.ExecuteScalarAsync();
             // --- Insert Details ---
             var insertDetailCmd = new NpgsqlCommand(
-                "INSERT INTO detail(street, city, zipCode) VALUES (@street, @city, @zipCode) RETURNING id",
+                "INSERT INTO details(street, city, zipCode) VALUES (@street, @city, @zipCode) RETURNING id",
                 _connection, transaction);
             insertDetailCmd.Parameters.AddWithValue("street", person.AdressDetails.Street);
             insertDetailCmd.Parameters.AddWithValue("city", person.AdressDetails.City);
             insertDetailCmd.Parameters.AddWithValue("zipCode", person.AdressDetails.ZipCode);
 
-            Guid detailId = (Guid)await insertDetailCmd.ExecuteScalarAsync();
+            Guid iddetails = (Guid)await insertDetailCmd.ExecuteScalarAsync();
 
             var insertPersonDetailCmd = new NpgsqlCommand(
-                "INSERT INTO person_detail(id_person, id_detail) VALUES (@idPerson, @idDetail)",
+                "INSERT INTO person_detail(idperson, iddetails) VALUES (@idperson, @iddetails)",
                 _connection, transaction);
-            insertPersonDetailCmd.Parameters.AddWithValue("idPerson", personId);
-            insertPersonDetailCmd.Parameters.AddWithValue("idDetail", detailId);
+            insertPersonDetailCmd.Parameters.AddWithValue("idperson", idperson);
+            insertPersonDetailCmd.Parameters.AddWithValue("iddetails", iddetails);
             await insertPersonDetailCmd.ExecuteNonQueryAsync();
         }
 
@@ -72,3 +80,5 @@ public class DbConnection
         await _connection.CloseAsync();
     }
 }
+
+#endregion

@@ -18,13 +18,14 @@ var host = Host.CreateDefaultBuilder(args)
         services.AddSingleton(provider =>
         {
             var conn = new NpgsqlConnection(
-                configuration.GetConnectionString("DefaultConnection"));
+                configuration.GetConnectionString("DefaultConnection")); 
             conn.Open(); // ouverture unique
             return conn;
         });
 
         // On enregistre notre service applicatif
-        services.AddTransient<DbConnection>();
+        services.AddTransient<CoursSupDeVinci.DbConnection>();
+
         
         // on enregistre le service ServiceCSV
         services.AddTransient<IServiceCSV, ServiceCSV>();
@@ -39,7 +40,7 @@ IServiceCSV ServiceCSV = scope.ServiceProvider.GetRequiredService<IServiceCSV>()
 
 
 
-String path = configuration.GetRequiredSection("CSVFiles")["CoursSupDeVinci"];
+String path = @"C:\Users\Lucas\OneDrive - SUP DE VINCI\Documents\B2\C#\Cours-C-Sharp\person\Data\Classe_SDV_B2.csv";
 
 
 Classe maClasse = ServiceCSV.ReadCSV(path);
